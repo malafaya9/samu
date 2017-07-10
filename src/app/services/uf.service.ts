@@ -8,4 +8,7 @@ export class UFService {
   getAll(): UF[] {
     return UFs;
   }
+  getUF(id:number): UF {
+    return UFs.find(uf => uf.id==id);
+  }
 }

@@ -9,4 +9,7 @@ export class SamuService {
   getAllMunicipiosAtendidosPorEstado(): Dados[] {
     return VALORES;
   }
+  getMunicipiosAtendidosDeUmEstado(id:any): Dados[] {
+    return VALORES.filter(municipio => municipio.uf_id==id);
+  }
 }
