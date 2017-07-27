@@ -1,11 +1,13 @@
-<h3>Dados do meu Estado</h3>
+<h3>Todos os dados</h3>
 <table>
   <tr>
     <th>Ano</th>
     <th>Nº de Atendimentos</th>
+    <th>Estado</th>
   </tr>
   <tr *ngFor="let item of dados; let i = index">
     <td>{{item.ano}}</td>
     <td>{{item.valor}}</td>
+    <td>{{item.uf_id}}</td>
   </tr>
 </table>

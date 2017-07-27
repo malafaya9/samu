@@ -1,5 +1,5 @@
 <div>
-  <p>ID: {{ Uf.id }}</p>
-  <p>Área: {{ Uf.area }}</p>
-  <p>Media de Atendimentos: {{ media }}</p>
+  <h2>Meu Estado: {{ Uf.nome }}</h2>
+  <p>Área: {{ Uf.area | number:'1.0-2'}}</p>
+  <p>Media de Atendimentos: {{ media | number:'1.0-1'}}</p>
 </div>
