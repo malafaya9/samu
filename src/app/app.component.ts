@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
         return sum/this.dados_da_samu.length;
     }
     ngOnInit(): void {
-        this.minhaUF = this.ufService.getUF(this.meuEstado);
+        this.ufService.getUF(this.meuEstado).then( uf => this.minhaUF=uf);
         this.dados_da_samu = this.samuService.getMunicipiosAtendidosDeUmEstado( this.meuEstado );
         this.media = this.getMedia();
     }
