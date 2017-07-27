@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
     }
     ngOnInit(): void {
         this.ufService.getUF(this.meuEstado).then( uf => this.minhaUF=uf);
-        this.dados_da_samu = this.samuService.getMunicipiosAtendidosDeUmEstado( this.meuEstado );
+        this.samuService.getMunicipiosAtendidosDeUmEstado( this.meuEstado ).then(dados => this.dados_da_samu = dados);
         this.media = this.getMedia();
     }
 }

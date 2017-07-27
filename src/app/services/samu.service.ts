@@ -6,10 +6,10 @@ import { VALORES } from './mock-samu_municipios_atendidos_por_estado';
 @Injectable()
 export class SamuService {
 
-  getAllMunicipiosAtendidosPorEstado(): Dados[] {
-    return VALORES;
+  getAllMunicipiosAtendidosPorEstado(): Promise<Dados[]> {
+    return Promise.resolve(VALORES);
   }
-  getMunicipiosAtendidosDeUmEstado(id:any): Dados[] {
-    return VALORES.filter(municipio => municipio.uf_id==id);
+  getMunicipiosAtendidosDeUmEstado(id:any): Promise<Dados[]> {
+    return Promise.resolve(VALORES.filter(municipio => municipio.uf_id==id));
   }
 }
