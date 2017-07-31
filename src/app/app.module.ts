@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RoutingModule } from './routing/routing-module.module';
+import { HttpModule }    from '@angular/http';
 
 import { SamuService } from './services/samu.service';
 import { UFService } from './services/uf.service';
@@ -23,7 +24,8 @@ import { TodosAtendimentosComponent } from './todos-atendimentos/todos-atendimen
   imports: [
     BrowserModule,
     FormsModule,
-    RoutingModule
+    RoutingModule,
+    HttpModule
   ],
   providers: [SamuService,UFService],
   bootstrap: [AppComponent]
